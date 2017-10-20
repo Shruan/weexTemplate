@@ -1,30 +1,24 @@
 <template>
   <div class="page-login">
-    <!-- <view-box ref="viewbox">
-      <box gap="10px 10px"> -->
         <div class="login-box">
           <div class="vux-demo">
             <h1 class="title">Welcome</h1>
           </div>
           <input class="input-class" type="text" v-model="username" />
           <input class="input-class" type="password" v-model="password" />
-          <text class="btn-login" type="primary" @click="login">登录</text>
+          <!-- <text class="btn-login" type="primary" @click="login">登录</text> -->
+          <wxc-button text="登录"
+               @wxcButtonClicked="login"></wxc-button>
         </div>
-      <!-- </box>
-    </view-box> -->
   </div>
 </template>
 
 <script>
-// import { Group, Cell, ViewBox, Box, XButton, Toast } from 'vux'
+import { WxcButton } from "weex-ui"
 
 export default {
   components: {
-    // Group,
-    // Cell,
-    // ViewBox,
-    // Box,
-    // XButton
+    WxcButton
   },
   data () {
     return {
